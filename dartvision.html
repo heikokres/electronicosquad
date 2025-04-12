@@ -16,18 +16,50 @@
       padding: 2rem;
     }
     h1 {
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
     }
-    img {
-      max-width: 400px;
+    .dartboard {
+      position: relative;
+      width: 400px;
+    }
+    .dartboard img {
       width: 100%;
       border-radius: 1rem;
       box-shadow: 0 0 20px #00ffcc;
+    }
+    .hotspot {
+      position: absolute;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    #info {
+      margin-top: 2rem;
+      font-size: 1.2rem;
+    }
+    /* Beispiel-Hotspot: Triple 20 */
+    .triple20 {
+      top: 50px;
+      left: 180px;
+      width: 40px;
+      height: 40px;
+      background-color: rgba(0, 255, 204, 0.3);
     }
   </style>
 </head>
 <body>
   <h1>DartVision – Projektübersicht</h1>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Darts_board.svg/512px-Darts_board.svg.png" alt="Dartscheibe">
+  <div class="dartboard">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Darts_board.svg/512px-Darts_board.svg.png" alt="Dartscheibe">
+    <!-- Beispiel-Hotspot -->
+    <div class="hotspot triple20" onclick="showHit('Triple 20')"></div>
+  </div>
+
+  <div id="info">🚀 Klicke auf ein Feld!</div>
+
+  <script>
+    function showHit(text) {
+      document.getElementById('info').textContent = '🎯 Treffer: ' + text;
+    }
+  </script>
 </body>
 </html>
