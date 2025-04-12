@@ -32,11 +32,6 @@
       border-radius: 50%;
       cursor: pointer;
     }
-    #info {
-      margin-top: 2rem;
-      font-size: 1.2rem;
-    }
-    /* Beispiel-Hotspot: Triple 20 */
     .triple20 {
       top: 50px;
       left: 180px;
@@ -44,17 +39,38 @@
       height: 40px;
       background-color: rgba(0, 255, 204, 0.3);
     }
+    #info {
+      margin-top: 2rem;
+      font-size: 1.2rem;
+    }
+    .description {
+      margin-top: 2rem;
+      max-width: 700px;
+      text-align: center;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
   </style>
 </head>
 <body>
   <h1>DartVision – Projektübersicht</h1>
+
   <div class="dartboard">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Darts_board.svg/512px-Darts_board.svg.png" alt="Dartscheibe">
+    <img src="A_digital_photograph_features_a_standard_dartboard.png" alt="Dartscheibe">
     <!-- Beispiel-Hotspot -->
     <div class="hotspot triple20" onclick="showHit('Triple 20')"></div>
   </div>
 
   <div id="info">🚀 Klicke auf ein Feld!</div>
+
+  <div class="description">
+    <p>
+      <strong>DartVision</strong> ist ein Projekt zur automatisierten Erkennung und Analyse von Darttreffern mithilfe von
+      Computer Vision, Bildverarbeitung und intelligenter Auswertung. Ziel ist es, das Werfen auf eine Dartscheibe
+      digital zu erfassen und auszuwerten – z. B. für Trainingszwecke, Online-Wettkämpfe oder einfach nur aus Spaß
+      an Technik und Darts.
+    </p>
+  </div>
 
   <script>
     function showHit(text) {
